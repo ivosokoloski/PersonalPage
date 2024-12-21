@@ -138,7 +138,6 @@ function movingMain(){
                 projectElements.style.opacity=1
                 projects.style.top=`${currentScrollprojectsimg2+(window.innerHeight/2)-scrollPosition}px`
                 if(scrollPosition-currentScrollprojectsimg2>=window.innerHeight/1.3){
-                    console.log(i+" "+i*1.1)
                     personalInfo.style.opacity=i*0.4
                     personalInfo.style.scale=i*0.4
                 }else{
