@@ -83,7 +83,7 @@ h2{
     transition: left 0.1s;
 }
 #about{
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
