@@ -164,7 +164,7 @@ window.onload= function (){
     };
     setTimeout(typeMainText,500)
     $(document).ready(function (){
-        $("#getYear").html(Date.now().valueOf())
+        $("#getYear").html(Date.now())
         $(".main-photo-img").hover(function (){
             mainPhotoScaleUP();
         },function (){
