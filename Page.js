@@ -162,10 +162,12 @@ window.onload= function (){
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     };
-    document.getElementById("getYear").innerHTML=date.getFullYear().toString()
+
     setTimeout(typeMainText,500)
     $(document).ready(function (){
-
+        let date= new Date();
+        let year =date.getFullYear()
+        $("#getYear").html(year)
         $(".main-photo-img").hover(function (){
             mainPhotoScaleUP();
         },function (){
