@@ -162,6 +162,7 @@ window.onload= function (){
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     };
+    document.getElementById("getYear").innerHTML=date.getFullYear().toString()
     setTimeout(typeMainText,500)
     $(document).ready(function (){
 
