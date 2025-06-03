@@ -192,6 +192,9 @@ window.onload= function (){
         $("#cpp").click(function (){
             window.open("https://github.com/ivosokoloski?tab=repositories&q=&type=&language=c%2B%2B&sort=","_blank")
         })
+        $("#csh").click(function (){
+            window.open("https://github.com/ivosokoloski/VaccinationApp","_blank")
+        })
         $("#java").click(function (){
             window.open("https://github.com/ivosokoloski?tab=repositories&q=&type=&language=java&sort=","_blank")
         })
