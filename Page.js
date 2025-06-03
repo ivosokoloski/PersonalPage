@@ -153,11 +153,21 @@ function movingMain(){
 
 }
 function powerOn(){
-    console.log("da")
     document.getElementById("powerOn").style.display="flex"
     document.getElementById("powerOff").style.display="none"
 }
+function powerOnAnime(){
+    return anime({
+        targets:".powerOff",
+        scale:[1,2,1],
+        translateX: 0,
+        duration: 3000,
+        easing: 'linear',
+        loop: true,
+    })
 
+
+}
 window.onload= function (){
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
@@ -168,6 +178,8 @@ window.onload= function (){
         let date= new Date();
         let year =date.getFullYear()
         $("#getYear").html(year)
+        let animationPowerOff=powerOnAnime();
+        animationPowerOff.play()
         $(".main-photo-img").hover(function (){
             mainPhotoScaleUP();
         },function (){
@@ -179,9 +191,9 @@ window.onload= function (){
             navElementsAnimationOff(this)
         })
         $("#powerOff").hover(function (){
-            navElementsAnimationOn(this)
+            animationPowerOff.pause()
         },function (){
-            navElementsAnimationOff(this)
+            animationPowerOff.play()
         }).click(function (){
             powerOn()})
         $("#powerOn").find("div").hover(function (){
