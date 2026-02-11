@@ -1,45 +1,45 @@
 # Personal Page
-🌐 [Посети ја страницата](https://ivosokoloski.vercel.app/)
+🌐 [Visit the website](https://ivosokoloski.vercel.app/)
 
-Personal Page е **frontend апликација**, чија главна цел е презентација на моите вештини, проекти и професионално портфолио преку веб-страница.
+Personal Page is a **frontend application**, whose main goal is the presentation of my skills, projects, and professional portfolio through a web page.
 
-📌 **Опис**  
-Апликацијата е развиена како едукативен и практичен проект, фокусиран на користење на JavaScript за креирање динамичен и интерактивен кориснички интерфејс.  
-Целта е да се прикаже личното портфолио на елегантен и професионален начин, комбинирајќи различни JS техники за подобрување на интерактивноста.
+📌 **Description**  
+The application is developed as an educational and practical project, focused on using JavaScript to create a dynamic and interactive user interface.  
+The goal is to showcase the personal portfolio in an elegant and professional manner, combining various JS techniques to enhance interactivity.
 
-Проектот е исклучиво **frontend**, без backend логика или надворешни API повици.
+The project is exclusively **frontend**, without backend logic or external API calls.
 
-⚙️ **Функционалности**  
-- Прикажување на лични информации и биографија  
-- Презентација на проекти и вештини  
-- Динамички мени и навигација  
-- Анимации и визуелни ефекти за подобрување на корисничкото искуство
+⚙️ **Functionalities**  
+- Displaying personal information and biography  
+- Presentation of projects and skills  
+- Dynamic menu and navigation  
+- Animations and visual effects to improve user experience
 
-🧠 **Концепти и технологии**  
-Во рамки на апликацијата се користат:
+🧠 **Concepts and Technologies**  
+Within the application, the following are used:
 
 **Vanilla JavaScript**  
-- Работа со DOM  
+- Working with the DOM  
 - Event handling  
-- Основна апликациска логика
+- Basic application logic
 
 **jQuery**  
-- Полесна DOM манипулација  
-- Работа со настани и анимации
+- Easier DOM manipulation  
+- Working with events and animations
 
 **anime.js**  
-- Имплементација на анимации  
-- Подобрување на корисничкото искуство
+- Implementation of animations  
+- Improving the user experience
 
 **HTML & CSS**  
-- Структура и стилизација на страницата  
-- Responsive дизајн и визуелна презентација
+- Structure and styling of the page  
+- Responsive design and visual presentation
 
-🎯 **Цел на проектот**  
-Целта на овој проект е:  
-- Вежбање на JavaScript и frontend концепти  
-- Креирање динамичен и визуелно привлечен веб-портфолио  
-- Подобрување на корисничкиот интерфејс преку интерактивни елементи и анимации  
-- Изградба на стабилна основа за понатамошни frontend проекти
+🎯 **Project Goal**  
+The goal of this project is:  
+- Practicing JavaScript and frontend concepts  
+- Creating a dynamic and visually appealing web portfolio  
+- Enhancing the user interface through interactive elements and animations  
+- Building a solid foundation for future frontend projects
 
-📌 Проектот е едукативна frontend апликација, наменета за презентација на лични информации, вештини и проекти во веб-форма.
+📌 The project is an educational frontend application, intended for presenting personal information, skills, and projects in a web format.
