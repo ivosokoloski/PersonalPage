@@ -97,7 +97,7 @@ h2{
     display: none ;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: white;!important;
     background-repeat: no-repeat;
     background-size: 10000px;
     width: 0;
@@ -118,8 +118,8 @@ h2{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    width: 65%;
-    height: 55%;
+    width: 80%;
+    height: 20%;
 
 }
 .project-elements-element{
@@ -138,7 +138,7 @@ h2{
     display: flex;
     justify-content: center;align-items: center;
     width: 40%;
-    height:50%;
+    height:80%;
 
 }
 #powerOff{
@@ -146,11 +146,12 @@ h2{
 }
 
 #powerOn{
+    width: 80%;
     display: none;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 15%;
 }
 #powerOff img, #powerOn img{
     cursor: pointer;
@@ -163,7 +164,7 @@ h2{
     display: flex;
     position: relative;
     justify-content: space-around;
-   padding: 1%;
+    padding: 1%;
 }
 #footer div{
     width: 15%;
@@ -187,4 +188,152 @@ h2{
     top: auto;
 }
 
+/* ========================================= */
+/* RESPONSIVE DEL (ZA TELEFONI I TABLETI)    */
+/* ========================================= */
 
+@media screen and (max-width: 768px) {
+    /* Navigacijata odi najgore i e horizontalna */
+    #navbar {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        background: rgba(0,0,0,0.8); /* Potemna za da se čita ubavo */
+    }
+    .navbar-elements {
+        margin: 0;
+        padding: 0;
+    }
+    #navbar li {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Glavniot tekst i slikata se redat edno pod drugo */
+    #main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 40%;
+    }
+    .main-text {
+        width: 90%;
+    }
+    .main-text h2 {
+        font-size: 18px; /* Pomala bukva za poeftino vklopuvajne na ekran */
+    }
+
+    /* About sekcijata zafaќa poveќe prostor */
+    #about {
+        width: 90%;
+        font-size: 14px;
+    }
+
+
+    #project-elements{
+
+        display: none;
+
+        justify-content: space-around;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        width: 70%;
+
+        height: 16%;
+
+
+
+    }
+
+    .project-elements-element{
+
+        z-index: 2;
+
+        width: 20%;
+
+        height: 30%;
+
+    }
+
+    .project-elements-element img{
+
+        width: 70%;
+
+        height: 70%;
+
+    }
+
+    #project-elements-text{
+
+        color: black;
+
+        position: absolute;
+
+        top: 0;
+
+        display: flex;
+
+        justify-content: center;align-items: center;
+
+        width: 40%;
+
+        height:50%;
+
+
+
+    }
+
+    #powerOff{
+
+        position: absolute;
+
+        display: flex;
+
+        justify-content: center;
+
+    }
+
+
+
+    #powerOn{
+
+        display: none;
+
+        justify-content: space-around;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        margin-top: 25%;
+
+    }
+
+    #powerOff img, #powerOn img{
+
+        cursor: pointer;
+
+
+
+    }
+
+    #powerOff img{
+
+        width: 30%;
+
+    }
+
+    /* Footer-ot se redi vertikalno */
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    #footer div {
+        width: 90%;
+        height: auto;
+    }
+}

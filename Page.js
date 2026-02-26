@@ -66,6 +66,7 @@ function scrollTextAnimation(){
         loop:true
     })
 }
+
 function movingMain(){
     let fabout1=false
     let fproject=false
@@ -76,6 +77,7 @@ function movingMain(){
     let currentScrollprojects=0
     let currentScrollprojectsimg=100000000
     let currentScrollprojectsimg2=0
+
     $(window).on('scroll', function() {
         document.getElementById("main-scroll-text").style.display="none"
         const scrollPosition = window.scrollY; // Get the current scroll position
@@ -85,27 +87,37 @@ function movingMain(){
         const projectsImg = document.getElementById("projects-main-element");
         const projectElements = document.getElementById("project-elements");
         const personalInfo = document.getElementById("personal-info");
-        main.style.left = `${scrollPosition*1.5}px`;
-        i=window.scrollY*0.0004
-        if(parseInt(main.style.left)>window.innerWidth*0.7){
+
+        // Responsive logika za razlicni ekrani
+        let isMobile = window.innerWidth <= 768;
+        let moveSpeed = isMobile ? 0.6 : 1.5;
+        let opacitySpeed = isMobile ? 0.0008 : 0.0004;
+        let screenThreshold = isMobile ? 0.8 : 0.7;
+
+        main.style.left = `${scrollPosition * moveSpeed}px`;
+        i = window.scrollY * opacitySpeed;
+
+        if(parseInt(main.style.left) > window.innerWidth * screenThreshold){
             about.style.opacity=i
             about.style.scale=i*1.1
         }else{
             about.style.opacity=0
         }
+
         if(about.style.opacity>1){
             if(!fabout1){
-                 currentScroll=scrollPosition
+                currentScroll=scrollPosition
                 fabout1=true
             }
             about.style.top=`${currentScroll+(window.innerHeight/2)-scrollPosition}px`
         }
+
         if(about.offsetTop<0){
             if(!fproject){
                 currentScrollprojects=scrollPosition
                 fproject=true
             }
-            projects.style.background="white"
+
             projects.style.width = window.innerWidth + "px"
             projects.style.height = window.innerHeight + "px"
             projectsImg.style.display="none"
@@ -113,8 +125,9 @@ function movingMain(){
             projects.style.top = `${currentScrollprojects +(window.innerHeight)+projects.offsetHeight/2 - scrollPosition}px`
 
         }else{
-          projects.style.display="none"
+            projects.style.display="none"
         }
+
         if(parseInt(projects.style.top)<=(window.innerHeight/2)){
             projects.style.top=window.innerHeight/2+"px"
             projectsImg.style.display="flex"
@@ -123,11 +136,14 @@ function movingMain(){
                 fprojectimg=true
             }
         }
+
         if(currentScrollprojectsimg<scrollPosition){
-            projectsImg.style.scale=2-(scrollPosition-currentScrollprojectsimg)*0.001
-            projectElements.style.scale=2-(scrollPosition-currentScrollprojectsimg)*0.001
+            let scaleSpeed = isMobile ? 0.002 : 0.001;
+            projectsImg.style.scale=2-(scrollPosition-currentScrollprojectsimg)*scaleSpeed
+            projectElements.style.scale=2-(scrollPosition-currentScrollprojectsimg)*scaleSpeed
             projectElements.style.display="flex"
             projectElements.style.opacity=i-1
+
             if(projectsImg.style.scale<=1){
                 if(!fprojectimg2){
                     currentScrollprojectsimg2=scrollPosition
@@ -137,7 +153,9 @@ function movingMain(){
                 projectElements.style.scale=1
                 projectElements.style.opacity=1
                 projects.style.top=`${currentScrollprojectsimg2+(window.innerHeight/2)-scrollPosition}px`
-                if(scrollPosition-currentScrollprojectsimg2>=window.innerHeight/1.3){
+
+                let personalInfoTrigger = isMobile ? window.innerHeight/1.8 : window.innerHeight/1.3;
+                if(scrollPosition-currentScrollprojectsimg2>=personalInfoTrigger){
                     personalInfo.style.opacity=i*0.4
                     personalInfo.style.scale=i*0.4
                 }else{
@@ -146,12 +164,9 @@ function movingMain(){
                 }
             }
         }
-
-
-
     });
-
 }
+
 function powerOn(){
     document.getElementById("powerOn").style.display="flex"
     document.getElementById("powerOff").style.display="none"
@@ -165,9 +180,8 @@ function powerOnAnime(){
         easing: 'linear',
         loop: true,
     })
-
-
 }
+
 window.onload= function (){
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
@@ -218,7 +232,5 @@ window.onload= function (){
             window.open("https://github.com/ivosokoloski?tab=repositories&q=&type=&language=javascript&sort=","_blank")
         })
         movingMain()
-
     })
-
 }
