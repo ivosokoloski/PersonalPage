@@ -194,6 +194,7 @@ window.onload= function (){
             animationPowerOff.pause()
         },function (){
             animationPowerOff.play()
+
         }).click(function (){
             powerOn()})
         $("#powerOn").find("div").hover(function (){
