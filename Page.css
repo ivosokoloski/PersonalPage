@@ -135,6 +135,11 @@ h2{
     color: black;
     position: absolute;
     top: 0;
+    display: flex;
+    justify-content: center;align-items: center;
+    width: 40%;
+    height:50%;
+
 }
 #powerOff{
     position: absolute;
@@ -145,6 +150,7 @@ h2{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 25%;
 }
 #powerOff img, #powerOn img{
     cursor: pointer;

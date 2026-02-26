@@ -201,6 +201,9 @@ window.onload= function (){
         },function (){
             navElementsAnimationOff(this)
         })
+        $("#project-elements-text").click(function (){
+            window.open("https://github.com/ivosokoloski","_blank")
+        })
         $("#cpp").click(function (){
             window.open("https://github.com/ivosokoloski?tab=repositories&q=&type=&language=c%2B%2B&sort=","_blank")
         })
