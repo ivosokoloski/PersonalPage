@@ -134,11 +134,11 @@ h2{
 #project-elements-text{
     color: black;
     position: absolute;
-    top: 0;
+    top: -50%;
     display: flex;
     justify-content: center;align-items: center;
-    width: 40%;
-    height:80%;
+    width: 30%;
+    height:100%;
 
 }
 #powerOff{
@@ -225,7 +225,7 @@ h2{
 
     /* About sekcijata zafaќa poveќe prostor */
     #about {
-        width: 90%;
+        width: 80%;
         font-size: 14px;
     }
 
@@ -335,5 +335,17 @@ h2{
     #footer div {
         width: 90%;
         height: auto;
+    }
+    #personal-info{
+        width: 40%;
+        opacity: 0;
+        text-align: center;
+    }
+
+    #container >div{
+        top: 70%;
+    }
+    #main{
+        top:50%!important;
     }
 }
