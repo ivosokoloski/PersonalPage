@@ -90,7 +90,7 @@ function movingMain(){
 
         // Responsive logika za razlicni ekrani
         let isMobile = window.innerWidth <= 768;
-        let moveSpeed = isMobile ? 4 : 1.5;
+        let moveSpeed = isMobile ? 40 : 1.5;
         let opacitySpeed = isMobile ? 0.0008 : 0.0004;
         let screenThreshold = isMobile ? 0.8 : 0.7;
 
