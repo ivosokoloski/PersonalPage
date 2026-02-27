@@ -94,7 +94,7 @@ function movingMain(){
         let opacitySpeed = isMobile ? 0.0008 : 0.0004;
         let screenThreshold = isMobile ? 0.8 : 0.7;
 
-        main.style.left = `${scrollPosition * moveSpeed}px`;
+        main.style.left = `${scrollPosition * 1.5}px`;
         i = window.scrollY * opacitySpeed;
 
         if(parseInt(main.style.left) > window.innerWidth * screenThreshold){
@@ -138,7 +138,7 @@ function movingMain(){
         }
 
         if(currentScrollprojectsimg<scrollPosition){
-            let scaleSpeed = isMobile ? 0.002 : 0.001;
+            let scaleSpeed = isMobile ? 0.001 : 0.001;
             projectsImg.style.scale=2-(scrollPosition-currentScrollprojectsimg)*scaleSpeed
             projectElements.style.scale=2-(scrollPosition-currentScrollprojectsimg)*scaleSpeed
             projectElements.style.display="flex"
