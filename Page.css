@@ -151,7 +151,7 @@ h2{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 13%;
 }
 #powerOff img, #powerOn img{
     cursor: pointer;
